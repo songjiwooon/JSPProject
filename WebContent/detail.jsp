@@ -41,17 +41,17 @@
 							if(request.getParameter("id").equals(rs.getString("id"))) {
 								%>
 				<table bgcolor="#000000" cellpadding="5" cellspacing="1" border="0" align="left" style="text-align:left">
-				<tr><td width="20%" bgcolor="#cacaca">아이디</td><td width="*" bgcolor="#ffffff"><% out.print(rs.getString("id")); %></td>
-				<tr><td width="20%" bgcolor="#cacaca">이름</td><td width="*" bgcolor="#ffffff"><% out.print(rs.getString("name")); %></td></tr>
-				<tr><td width="20%" bgcolor="#cacaca">전화번호</td><td width="*" bgcolor="#ffffff"><% out.print(rs.getString("tel")); %></td></tr>
-				<tr><td width="20%" bgcolor="#cacaca">이메일</td><td width="*" bgcolor="#ffffff"><% out.print(rs.getString("email")); %></td></tr>
-				<tr><td width="20%" bgcolor="#cacaca">학과</td><td width="*" bgcolor="#ffffff"><% out.print(rs.getString("dept")); %></td></tr>
-				<tr><td width="20%" bgcolor="#cacaca">성별</td><td width="*" bgcolor="#ffffff"><% out.print(rs.getString("gender")); %></td></tr>
-				<tr><td width="20%" bgcolor="#cacaca">태어난 달</td><td width="*" bgcolor="#ffffff"><% out.print(rs.getString("birth")); %></td></tr>
-				<tr><td width="20%" bgcolor="#cacaca">자기소개</td><td width="*" bgcolor="#ffffff"><% out.print(rs.getString("introduction")); %></td></tr>
+				<tr><td width="20%" bgcolor="#cacaca">아이디</td><td width="*" bgcolor="#ffffff"><%= rs.getString("id") %></td>
+				<tr><td width="20%" bgcolor="#cacaca">이름</td><td width="*" bgcolor="#ffffff"><%= rs.getString("name") %></td></tr>
+				<tr><td width="20%" bgcolor="#cacaca">전화번호</td><td width="*" bgcolor="#ffffff"><%= rs.getString("tel") %></td></tr>
+				<tr><td width="20%" bgcolor="#cacaca">이메일</td><td width="*" bgcolor="#ffffff"><%= rs.getString("email") %></td></tr>
+				<tr><td width="20%" bgcolor="#cacaca">학과</td><td width="*" bgcolor="#ffffff"><%= rs.getString("dept") %></td></tr>
+				<tr><td width="20%" bgcolor="#cacaca">성별</td><td width="*" bgcolor="#ffffff"><%= rs.getString("gender") %></td></tr>
+				<tr><td width="20%" bgcolor="#cacaca">태어난 달</td><td width="*" bgcolor="#ffffff"><%= rs.getString("birth") %></td></tr>
+				<tr><td width="20%" bgcolor="#cacaca">자기소개</td><td width="*" bgcolor="#ffffff"><%= rs.getString("introduction") %></td></tr>
 				<tr><td></td><td>
 			<input type="button" value="목록" onclick="location.href='list.jsp?state=Default'" />
-			<input type="button" value="수정" onclick="location.href='pwcheck.jsp?id=<% out.print(rs.getString("id")); %>'" /></td></tr>
+			<input type="button" value="수정" onclick="location.href='pwcheck.jsp?id=<%= rs.getString("id") %>'" /></td></tr>
 				</table>
 				<% 
 							}

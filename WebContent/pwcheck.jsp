@@ -20,7 +20,7 @@ String pwd = request.getParameter("pwd");
 <h3>본인 여부 확인</h3>
 <hr>
 <form name="fo" method="get">
-사용자 ID : <input type=text value="<% out.print(request.getParameter("id")); %>" name="id" readonly><br>
+사용자 ID : <input type=text value="<%= request.getParameter("id") %>" name="id" readonly><br>
 비밀 번호 : <input type="password" value="" name="pwd"><br>
            <input type="submit" value="수정">           
 </form>
@@ -44,12 +44,12 @@ String pwd = request.getParameter("pwd");
 				if (id.equals(id_check)) {
 					if(pwd.equals(pwd_check)) {
 						%>
-						<jsp:forward page="Pass.jsp?id=<% out.print(id); %>"></jsp:forward>
+						<jsp:forward page="Pass.jsp?id=<%= id %>"></jsp:forward>
 						<%
 					}
 					else if(!pwd.equals(pwd_check)) {
 						%>
-						<jsp:forward page="NonPass.jsp?id=<% out.print(id); %>"></jsp:forward>
+						<jsp:forward page="NonPass.jsp?id=<%= id %>"></jsp:forward>
 						<%
 					}
 					break;

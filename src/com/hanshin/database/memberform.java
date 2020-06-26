@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -72,6 +73,9 @@ public class memberform extends HttpServlet{
 						break;
 					}
 				}
+				RequestDispatcher rd = req.getRequestDispatcher("edit.jsp");
+				req.setAttribute("id", id);
+				rd.forward(req, resp);
 				resp.sendRedirect("edit.jsp");
 			}
 			
@@ -99,6 +103,7 @@ public class memberform extends HttpServlet{
 					pst.setString(9, introduction);
 					pst.executeUpdate();
 
+					JOptionPane.showMessageDialog(null, "회원가입 성공!");
 					resp.sendRedirect("login.jsp");
 				}
 			}

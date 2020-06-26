@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <script language="JavaScript">
 function edit()
-{location = "detail.jsp";}
+{location = "detail.jsp?id=<%=request.getParameter("id")%>";}
 </script>
 <html>
 <head>

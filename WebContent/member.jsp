@@ -47,7 +47,7 @@ if(!request.getParameter("id").equals("")) {
 					    &nbsp;아이디
 					   </td>
 					   <td width="*" bgcolor="#ffffff">
-					    <input type="text" value="<% out.print(request.getParameter("id")); %>" name="id" readonly />
+					    <input type="text" value="<%= request.getParameter("id") %>" name="id" readonly />
 					   </td>
 					  </tr>
 					  
@@ -56,7 +56,7 @@ if(!request.getParameter("id").equals("")) {
 					    &nbsp;비밀번호
 					   </td>
 					   <td width="*" bgcolor="#ffffff">
-					    <input type="password" value="<% out.print(rs.getString("pwd")); %>" name="pwd" />
+					    <input type="password" value="<%= rs.getString("pwd") %>" name="pwd" />
 					   </td>
 					  </tr>
 					  
@@ -65,7 +65,7 @@ if(!request.getParameter("id").equals("")) {
 					    &nbsp;이름
 					   </td>
 					   <td width="*" bgcolor="#ffffff">
-					    <input type="text" value="<% out.print(rs.getString("name")); %>" name="name" readonly />
+					    <input type="text" value="<%= rs.getString("name") %>" name="name" readonly />
 					   </td>
 					  </tr>
 					  
@@ -74,7 +74,7 @@ if(!request.getParameter("id").equals("")) {
 					    &nbsp;전화번호
 					   </td>
 					   <td width="*" bgcolor="#ffffff">
-					    <input type="text" value="<% out.print(rs.getString("tel")); %>" name="tel" />
+					    <input type="text" value="<%= rs.getString("tel") %>" name="tel" />
 					   </td>
 					  </tr>
 					  
@@ -83,7 +83,7 @@ if(!request.getParameter("id").equals("")) {
 					    &nbsp;이메일
 					   </td>
 					   <td width="*" bgcolor="#ffffff">
-					    <input type="text" value="<% out.print(rs.getString("email")); %>" name="email" />
+					    <input type="text" value="<%= rs.getString("email") %>" name="email" />
 					   </td>
 					  </tr>
 					  
@@ -138,7 +138,7 @@ if(!request.getParameter("id").equals("")) {
 					    &nbsp;자기소개
 					   </td>
 					   <td width="*" bgcolor="#ffffff">
-					    <textarea cols="30" rows="10" name="introduction"><% out.print(rs.getString("introduction")); %></textarea>
+					    <textarea cols="30" rows="10" name="introduction"><%= rs.getString("introduction") %></textarea>
 					   </td>
 					  </tr>
 					  

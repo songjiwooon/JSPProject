@@ -58,14 +58,14 @@
 								%>
 								<tr>
 									<td><% out.print(i); %></td>
-									<td><a href="detail.jsp?id=<%out.print(rs.getString("id"));%>"><% out.print(rs.getString("id")); %></a></td>
-									<td>&nbsp;&nbsp; <% out.print(rs.getString("name")); %></td>
-									<td>&nbsp;&nbsp; <% out.print(rs.getString("tel")); %></td>
-									<td>&nbsp;&nbsp; <% out.print(rs.getString("email")); %></td>
-									<td>&nbsp;&nbsp; <% out.print(rs.getString("dept")); %></td>
-									<td>&nbsp;&nbsp; <% out.print(rs.getString("gender")); %></td>
-									<td>&nbsp;&nbsp; <% out.print(rs.getString("birth")); %></td>
-									<td>&nbsp;&nbsp; <% out.print(rs.getString("introduction")); %></td>												
+									<td><a href="detail.jsp?id=<%= rs.getString("id") %>"><%= rs.getString("id") %></a></td>
+									<td>&nbsp;&nbsp; <%= rs.getString("name") %></td>
+									<td>&nbsp;&nbsp; <%= rs.getString("tel") %></td>
+									<td>&nbsp;&nbsp; <%= rs.getString("email") %></td>
+									<td>&nbsp;&nbsp; <%= rs.getString("dept") %></td>
+									<td>&nbsp;&nbsp; <%= rs.getString("gender") %></td>
+									<td>&nbsp;&nbsp; <%= rs.getString("birth") %></td>
+									<td>&nbsp;&nbsp; <%= rs.getString("introduction") %></td>												
 								</tr>
 								<%
 								i++;
